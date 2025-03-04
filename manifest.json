@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Thumbnail Downloader",
+  "version": "1.0",
+  "description": "Download YouTube video thumbnails with one click",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

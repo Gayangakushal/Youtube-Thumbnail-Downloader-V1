@@ -1,0 +1,62 @@
+html
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        width: 300px;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+      }
+      button {
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #cc0000;
+      }
+      #message {
+        margin-top: 10px;
+        color: #333;
+      }
+      .thumbnail-container {
+        margin-top: 10px;
+        text-align: center;
+      }
+      .thumbnail-image {
+        max-width: 100%;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+      }
+      .quality-selector {
+        margin-top: 10px;
+        width: 100%;
+        padding: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>YouTube Thumbnail Downloader</h2>
+    <div id="not-youtube" style="display: none;">
+      Please navigate to a YouTube video page to use this extension.
+    </div>
+    <div id="youtube-content">
+      <select id="quality-selector" class="quality-selector">
+        <option value="maxresdefault">Maximum Resolution</option>
+        <option value="sddefault">Standard Definition</option>
+        <option value="hqdefault">High Quality</option>
+        <option value="mqdefault">Medium Quality</option>
+      </select>
+      <button id="download-btn">Download Thumbnail</button>
+      <div id="message"></div>
+      <div class="thumbnail-container" id="thumbnail-container"></div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
